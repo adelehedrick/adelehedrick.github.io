@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://adelehedrick.github.io/</loc>
+    <lastmod>2016-10-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/blog/2016/10/15/clojure-got-tutorial/</loc>
+    <lastmod>2016-10-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/blog/2016/09/24/clojure-gedit-syntax-highlighting/</loc>
+    <lastmod>2016-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/blog/2016/09/22/command-line-arguments-clojure/</loc>
+    <lastmod>2016-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/blog/2016/09/22/clojure-classes/</loc>
+    <lastmod>2016-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/blog/2016/09/22/clojure-bash-aliases/</loc>
+    <lastmod>2016-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/blog/2016/09/21/little-input-clojure/</loc>
+    <lastmod>2016-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/blog/2016/09/21/split-clojure/</loc>
+    <lastmod>2016-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/blog/2016/09/19/first-clojure-repl/</loc>
+    <lastmod>2016-09-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/blog/2016/09/19/first-lein-repl/</loc>
+    <lastmod>2016-09-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/blog/2016/09/18/getting-started-clojure/</loc>
+    <lastmod>2016-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/clojure/</loc>
+    <lastmod>2016-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/blog/2016/09/18/setting-up-lein/</loc>
+    <lastmod>2016-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/about/</loc>
+    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/contact/</loc>
+  </url>
+  
+</urlset>
