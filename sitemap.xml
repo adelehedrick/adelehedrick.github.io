@@ -3,7 +3,27 @@
   
   <url>
     <loc>https://adelehedrick.github.io/</loc>
-    <lastmod>2016-10-15T00:00:00+00:00</lastmod>
+    <lastmod>2017-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/blog/2017/01/03/cleaning-used-tank/</loc>
+    <lastmod>2017-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/compilers/</loc>
+    <lastmod>2017-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/blog/2016/10/29/blasting-off-scala/</loc>
+    <lastmod>2016-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adelehedrick.github.io/blog/2016/10/27/getting-started-scala/</loc>
+    <lastmod>2016-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -53,11 +73,6 @@
   
   <url>
     <loc>https://adelehedrick.github.io/blog/2016/09/18/getting-started-clojure/</loc>
-    <lastmod>2016-09-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adelehedrick.github.io/clojure/</loc>
     <lastmod>2016-09-18T00:00:00+00:00</lastmod>
   </url>
   

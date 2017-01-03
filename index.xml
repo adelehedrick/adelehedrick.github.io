@@ -6,8 +6,176 @@
     <description>Recent content on Syntactic Sugar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://adelehedrick.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cleaning a Used Fish Tank</title>
+      <link>https://adelehedrick.github.io/blog/2017/01/03/cleaning-used-tank/</link>
+      <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://adelehedrick.github.io/blog/2017/01/03/cleaning-used-tank/</guid>
+      <description>
+
+&lt;h1 id=&#34;getting-a-deal-on-varagesale&#34;&gt;Getting a Deal On Varagesale&lt;/h1&gt;
+
+&lt;p&gt;In this aquaponics system, I am using an ancient microwave stand to support the whole system (trying to limit costs in some areas so I can splurge in others), and so I am restricted to a 10 gallon fish tank. Since I am trying to save money building this system, I decided to buy a used tank, and found the perfect sized tank for $10 CAD on &lt;a href=&#34;https://www.varagesale.com/&#34;&gt;Varagesale&lt;/a&gt; from a person that lives within 5 km from me! The kind fellow included all the accessories that goes into keeping fish (filter, heater, lid and light), but I do not intend on using anything except for the tank itself.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./img/aquaponics/first-10-gal-system/cleaning-tank-before.jpg&#34; width=&#34;400px&#34; alt=&#34;Cleaning Used Tank - Before&#34; &gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see the tank is pretty grungy and has calcium/lime/algae/aliens left over on it. The struggle with this task is that whatever you use to clean the tank has to be safe to eat as well as safe for fish and plants to survive with. Therefore, I got to use the extreme cleaning power of &lt;em&gt;vinegar&lt;/em&gt;, followed by an extreme rinse.&lt;/p&gt;
+
+&lt;h1 id=&#34;cleaning-materials&#34;&gt;Cleaning Materials&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Toothbrush&lt;/li&gt;
+&lt;li&gt;Razor&lt;/li&gt;
+&lt;li&gt;Vinegar&lt;/li&gt;
+&lt;li&gt;Water&lt;/li&gt;
+&lt;li&gt;4 year old (optional)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;cleaning-method&#34;&gt;Cleaning Method&lt;/h1&gt;
+
+&lt;p&gt;Simply put, I dipped the toothbrush in straight up vinegar and scrubbed the areas of extreme build up, scrapped the build up with the razor, and then scrub with the toothbrush yet again. Once I felt  satisfied with the results, I added a couple jugs worth of tap water to rinse off the sides and use a paper towel to continue washing the inside of the tank. When I emptied the vinegar water (assisted by my strong man husband), I continued to rinse the inside of the tank till I was satisfied the vinegar was all gone.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./img/aquaponics/first-10-gal-system/cleaning-tank-after.jpg&#34; width=&#34;400px&#34; alt=&#34;Cleaning Used Tank - After&#34; &gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;result&#34;&gt;Result&lt;/h1&gt;
+
+&lt;p&gt;As you can see in the above picture (still has vinegar/water in the tank) the results were amazing! Considering I got this tank for $10 CAD, I would call this a win!&lt;/p&gt;
+
+&lt;p&gt;We will see how my rinsing job holds up when I add water and start observing the pH.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Compilers</title>
+      <link>https://adelehedrick.github.io/compilers/</link>
+      <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://adelehedrick.github.io/compilers/</guid>
+      <description>
+
+&lt;h2 id=&#34;office-hours&#34;&gt;Office Hours&lt;/h2&gt;
+
+&lt;p&gt;Mondays from 11am to 12pm in the shared TA office UA4029, but you are better off to just send me an email with your questions/comments/code so that I can address your concerns right away!&lt;/p&gt;
+
+&lt;h2 id=&#34;tutorials&#34;&gt;Tutorials&lt;/h2&gt;
+
+&lt;p&gt;Material and blog posts, that I create, which directly relate to the course, will be listed here.&lt;/p&gt;
+
+&lt;h2 id=&#34;bonus&#34;&gt;Bonus&lt;/h2&gt;
+
+&lt;p&gt;Supplemental material that I create which may or may not be useful to you, will be listed here.&lt;/p&gt;
+
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+
+&lt;p&gt;Any helpful resources that I find will be posted here.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Blasting Off with Scala</title>
+      <link>https://adelehedrick.github.io/blog/2016/10/29/blasting-off-scala/</link>
+      <pubDate>Sat, 29 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://adelehedrick.github.io/blog/2016/10/29/blasting-off-scala/</guid>
+      <description>
+
+&lt;h2 id=&#34;before-we-begin&#34;&gt;Before We Begin&lt;/h2&gt;
+
+&lt;p&gt;Make sure you have set up your environment and are able to use &lt;code&gt;scala&lt;/code&gt; and &lt;code&gt;scalac&lt;/code&gt;, if this is unfamiliar please visit &lt;a href=&#34;https://adelehedrick.github.io/blog/2016/10/27/getting-started-scala/&#34;&gt;Getting Started with Scala&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;object&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;HelloWorld&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;args&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;Array&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;String&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;])&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;Unit&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #000000&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Hello, world!&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;)&lt;/span&gt;
+  &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Scala</title>
+      <link>https://adelehedrick.github.io/blog/2016/10/27/getting-started-scala/</link>
+      <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://adelehedrick.github.io/blog/2016/10/27/getting-started-scala/</guid>
+      <description>
+
+&lt;h2 id=&#34;before-we-begin&#34;&gt;Before We Begin&lt;/h2&gt;
+
+&lt;p&gt;This guide will be for setting up your environment in a Linux OS, I&amp;rsquo;m currently using Ubuntu. You will need Java version 1.8&lt;/p&gt;
+
+&lt;p&gt;To check your Java version just open up a terminal and type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;java -version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Just like Clojure, Scala compiles into JVM, that is why we need Java!&lt;/p&gt;
+
+&lt;h2 id=&#34;get-scala-up-running&#34;&gt;Get Scala Up &amp;amp; Running&lt;/h2&gt;
+
+&lt;p&gt;For this tutorial I used the Scala &lt;a href=&#34;http://www.scala-lang.org/documentation/getting-started.html&#34;&gt;Getting Started&lt;/a&gt; instructions as a resource. If you find my tutorials have too much detail, then work from that resource, otherwise you can continue on with my tutorial.&lt;/p&gt;
+
+&lt;h3 id=&#34;step-1-download-scala&#34;&gt;Step 1. Download Scala&lt;/h3&gt;
+
+&lt;p&gt;You can use &lt;code&gt;wget&lt;/code&gt; to download the tgz from &lt;a href=&#34;http://downloads.lightbend.com/scala/2.11.8/scala-2.11.8.tgz&#34;&gt;http://downloads.lightbend.com/scala/2.11.8/scala-2.11.8.tgz&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget http://downloads.lightbend.com/scala/2.11.8/scala-2.11.8.tgz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;step-2-unzip-and-move&#34;&gt;Step 2. Unzip and Move&lt;/h3&gt;
+
+&lt;p&gt;Unzip the compressed file using &lt;code&gt;tar&lt;/code&gt; then move and rename the folder to &lt;em&gt;scala&lt;/em&gt; in the &lt;code&gt;/usr/local/share&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;tar -xvzf scala-2.11.8.tgz
+sudo mv scala-2.11.8 /usr/local/share/scala
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;step-3-modify-environment-variables&#34;&gt;Step 3. Modify Environment Variables&lt;/h3&gt;
+
+&lt;p&gt;Open up your environment variables file in an editor via &lt;code&gt;sudo gedit /etc/environment&lt;/code&gt; and within the PATH variable assignment, between the double quotes, add &lt;code&gt;:/usr/local/share/scala/bin&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;PATH=&amp;quot;&amp;lt;other stuff&amp;gt;:/usr/local/share/scala/bin&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;step-4-restart-computer&#34;&gt;Step 4. Restart Computer&lt;/h3&gt;
+
+&lt;p&gt;Restart your computer make the changes you made to the &lt;code&gt;environment&lt;/code&gt; file come into effect.&lt;/p&gt;
+
+&lt;h3 id=&#34;step-5-test-scala-repl&#34;&gt;Step 5. Test Scala REPL&lt;/h3&gt;
+
+&lt;p&gt;In your terminal type the command &lt;code&gt;scala&lt;/code&gt; and you should then see a &lt;code&gt;scala&amp;gt;&lt;/code&gt; prompt. At this point you can test a simple &amp;lsquo;hello world&amp;rsquo; by typing &lt;code&gt;println(&amp;quot;Hello World&amp;quot;)&lt;/code&gt; which should then print out the response to the console.&lt;/p&gt;
+
+&lt;p&gt;To exit the REPL use the command &lt;code&gt;:q&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;step-6-compile-scala&#34;&gt;Step 6. Compile Scala&lt;/h3&gt;
+
+&lt;p&gt;Create a &lt;code&gt;hello.scala&lt;/code&gt; file with the following &lt;em&gt;hello world&lt;/em&gt; contents:&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;object&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;HelloWorld&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #000000&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;args&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;Array&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;String&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;])&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;Unit&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #000000&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Hello, world!&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;)&lt;/span&gt;
+  &lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #ce5c00; font-weight: bold&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Open up a terminal at the location of your Scala file and use the Scala compiler to compile the class.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;scalac hello.scala
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now if you type &lt;code&gt;ls&lt;/code&gt; to list the files in the current folder, you will find &lt;code&gt;HelloWorld.class&lt;/code&gt; and &lt;code&gt;HelloWorld$.class&lt;/code&gt;. To run your new Scala class, execute:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;scala HelloWorld
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Exploring Game of Thrones Dataset with Clojure</title>
@@ -948,7 +1116,7 @@ sudo update-mime-database mime
 
 &lt;p&gt;In terminal:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rlwrap java -cp ~/clojure-1.8.0.jar clojure.main
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rlwrap java -cp ~/clojure-1.8.0.jar:. clojure.main
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Notice the &lt;code&gt;~/&lt;/code&gt; which points to the home folder no matter what directory you are currently in!&lt;/p&gt;
@@ -1515,61 +1683,6 @@ Caused by: java.lang.RuntimeException: Unable to resolve symbol: printlny in thi
     </item>
     
     <item>
-      <title>Learn Clojure</title>
-      <link>https://adelehedrick.github.io/clojure/</link>
-      <pubDate>Sun, 18 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://adelehedrick.github.io/clojure/</guid>
-      <description>
-
-&lt;h2 id=&#34;tutorials&#34;&gt;Tutorials&lt;/h2&gt;
-
-&lt;p&gt;Let me help you through the wonderful world of the Lisp like language &lt;em&gt;Clojure&lt;/em&gt; by providing you&amp;ndash;in order&amp;ndash;the blog posts dedicated to the topic.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://adelehedrick.github.io/blog/2016/09/18/getting-started-clojure/&#34;&gt;Getting Started with Clojure&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;How to download and use the clojure.jar&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://adelehedrick.github.io/blog/2016/09/22/clojure-classes/&#34;&gt;Making Classes From Clojure&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;How to compile Clojure files into class files, and execute them!&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://adelehedrick.github.io/blog/2016/09/22/command-line-arguments-clojure/&#34;&gt;Basics of Command Line Arguments in Clojure&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Ready to pass a value to your program? How about two? Three? Or an undefined amount?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://adelehedrick.github.io/blog/2016/09/21/little-input-clojure/&#34;&gt;A Little Input in Clojure&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;How to read text from a file. Also includes if statements and loops.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://adelehedrick.github.io/blog/2016/09/21/split-clojure/&#34;&gt;Doing the Splits in Clojure&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;How to split a string on a character.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;bonus&#34;&gt;Bonus&lt;/h2&gt;
-
-&lt;p&gt;If you express interest in learning something a little extra, I will try my best to accomodate, even if I have no idea how to do it!&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://adelehedrick.github.io/blog/2016/09/22/clojure-bash-aliases/&#34;&gt;Taking Advantage of Bash Aliases for Clojure&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://adelehedrick.github.io/blog/2016/09/24/clojure-gedit-syntax-highlighting/&#34;&gt;Syntax Highlighting for Clojure in gedit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://adelehedrick.github.io/blog/2016/09/18/setting-up-lein/&#34;&gt;Setting Up Leiningen&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://adelehedrick.github.io/blog/2016/09/19/first-lein-repl/&#34;&gt;Your First Leiningen REPL&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://clojure.org&#34;&gt;Official Clojure website&lt;/a&gt; is always good to have handy.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.braveclojure.com/clojure-for-the-brave-and-true/&#34;&gt;Clojure for the Brave and True&lt;/a&gt; is an amusing book on Clojure. Can be confusing at times, but push on and it will explain everything.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://clojurekoans.com/&#34;&gt;Clojure Koans&lt;/a&gt; are fun little exercises&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Setting Up Leiningen</title>
       <link>https://adelehedrick.github.io/blog/2016/09/18/setting-up-lein/</link>
       <pubDate>Sun, 18 Sep 2016 00:00:00 +0000</pubDate>
@@ -1635,36 +1748,6 @@ Caused by: java.lang.RuntimeException: Unable to resolve symbol: printlny in thi
 &lt;h2 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h2&gt;
 
 &lt;p&gt;Now that you have Leiningen installed and the Clojure compiler downloaded, why don&amp;rsquo;t you start &lt;a href=&#34;https://adelehedrick.github.io/blog/2016/09/19/first-lein-repl/&#34;&gt;your first Leiningen REPL&lt;/a&gt;?&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About Adele</title>
-      <link>https://adelehedrick.github.io/about/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://adelehedrick.github.io/about/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m passionate about databases and data, and have a desire to apply learned data scientist and machine learning skills. Am able to use full-stack web and mobile skills to collect, analyze and visualize data. I enjoy sharing ideas, agile development, setting goals, and long hours coding!&lt;/p&gt;
-
-&lt;p&gt;![Profile Pic][img/profile_pic.jpeg]&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://adelehedrick.github.io/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://adelehedrick.github.io/contact/</guid>
-      <description>
-
-&lt;h1 id=&#34;feel-free-to-drop-me-a-line&#34;&gt;Feel free to drop me a line&lt;/h1&gt;
-
-&lt;p&gt;&lt;div class=&#34;icon-sm&#34;&gt;&lt;i class=&#34;fa fa-linkedin&#34;&gt;&lt;/i&gt;&lt;/div&gt;&lt;a href=&#34;https://ca.linkedin.com/in/adelehedrick&#34;&gt;adelehedrick&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;icon-sm&#34;&gt;&lt;i class=&#34;fa fa-github-alt&#34;&gt;&lt;/i&gt;&lt;/div&gt;&lt;a href=&#34;https://github.com/adelehedrick&#34;&gt;adelehedrick&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;icon-sm&#34;&gt;&lt;i class=&#34;fa fa-envelope&#34;&gt;&lt;/i&gt;&lt;/div&gt;&lt;a href=&#34;mailto:adele@syntacticsugar.ca&#34;&gt;adele@syntacticsugar.ca&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
