@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Discovering the Antlr</title>
+
+  <meta name="author" content="" />
+  <meta name="keywords" content="">
+
+  
+
+  <meta name="generator" content="Hugo 0.16" />
+
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900i" rel="stylesheet"> 
+
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+  
+  <link href="https://adelehedrick.github.io/css/animate.css" rel="stylesheet">
+
+  
+  <link href="https://adelehedrick.github.io/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+  
+  <link href="https://adelehedrick.github.io/css/custom.css" rel="stylesheet">
+
+  
+    
+
+  
+  <link rel="shortcut icon" href="https://adelehedrick.github.io/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://adelehedrick.github.io/img/apple-touch-icon.png" />
+  
+
+  <link href="https://adelehedrick.github.io/css/owl.carousel.css" rel="stylesheet">
+  <link href="https://adelehedrick.github.io/css/owl.theme.css" rel="stylesheet">
+
+  <link rel="alternate" href="https://adelehedrick.github.io/index.xml" type="application/rss+xml" title="Syntactic Sugar">
+
+  
+  <meta property="og:title" content="Discovering the Antlr" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/" />
+  <meta property="og:image" content="img/logo.png" />
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="https://adelehedrick.github.io/">
+                    <img src="https://adelehedrick.github.io/img/logo-icon.png" alt="Discovering the Antlr logo" class="hidden-xs hidden-sm">
+                    <img src="https://adelehedrick.github.io/img/logo-icon.png" alt="Discovering the Antlr logo" class="visible-xs visible-sm">
+                    <h1 id="site-title">Adele M. Hedrick</h1>
+                    <span class="sr-only">Discovering the Antlr - go to homepage</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li class="dropdown">
+                        <a href="../../../../../">Home</a>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="../../../../../compilers/">Compilers</a>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="../../../../../blog/">Blog</a>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="../../../../../contact/">Contact</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Discovering the Antlr</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">March 12, 2017</p>
+
+                        <div id="post-content">
+                          
+
+<h2 id="the-purpose">The Purpose</h2>
+
+<p>The goal of this tutorial is to demonstrate how you can use Antlr to program your context free grammar for a made up programming language. By the end of the tutorial you will be able to feed your made up language source code through the <code>ParseFile</code> program and get a Java version that you can then compile and execute.</p>
+
+<h2 id="before-we-begin">Before We Begin</h2>
+
+<p>You need Java 1.8 working on your machine! Even if you don&rsquo;t have the aliases set up on your computer for Antlr, you will be able to continue on with this tutorial.</p>
+
+<p>You will need to download the <a href="https://github.com/adelehedrick/Compilers2017">course repo</a> that I set up, and you will be starting in the <code>Silly-Antlr-Tutorial</code>. The final code for the tutorial is in the <code>Silly-Antlr-Tutorial-Full</code> directory for your reference, but it is best if you follow along from the starting point.</p>
+
+<h2 id="tour-of-starter-files">Tour of Starter Files</h2>
+
+<p>Once you download the repo and navigate to the <code>Silly-Antlr-Tutorial</code>, you will see the following files:</p>
+
+<ul>
+<li>antlr-4.6-complete.jar</li>
+<li>inputfile</li>
+<li>Makefile</li>
+<li>ParseFile.java</li>
+<li>Silly.g4</li>
+</ul>
+
+<h3 id="antlr-jar">Antlr Jar</h3>
+
+<p>For your convenience, the Antlr JAR has been included, and is referenced relatively from the Makefile so you won&rsquo;t have to worry about storing it somewhere specific on your computer. Just keep it right there.</p>
+
+<h3 id="input-file">Input File</h3>
+
+<p>This file contains the source code from our Silly language that will get fed into our parser. We will look at this a little more closely when we create our context free grammar.</p>
+
+<h3 id="makefile">Makefile</h3>
+
+<p>The Makefile contains 4 commands: <code>all</code>, <code>run</code>, <code>silly</code> and <code>clean</code>. The <code>make all</code> command will compile the <code>Silly.g4</code> into the required java files, and then compile the generated java files. The <code>make run</code> command will parse the <code>inputfile</code> with the generated lexer and send the output to a <code>SillyOut.java</code> file. The <code>make silly</code> command will compile and run the <code>SillyOut.java</code> file. Lastly, the <code>make clean</code> will remove all the generated and compiled class files from the directory.</p>
+
+<h3 id="parsefile-java">ParseFile.java</h3>
+
+<p>This is the bare bones parser that will take the input stream, feed it through the generated Silly Lexer to get tokens, and then the tokens get fed through the Silly Parser which will print out the generated java code. You will not need to modify this file in any way.</p>
+
+<h3 id="silly-g4">Silly.g4</h3>
+
+<p>This is where you will program your context free grammar!</p>
+
+<h3 id="test-the-starter-files">Test the Starter Files</h3>
+
+<p>Open up your terminal/cmd in this directory and run <code>make all</code>. You should get an output similar to this:</p>
+
+<pre><code class="language-bash"> make all
+java -cp ./antlr-4.6-complete.jar:. org.antlr.v4.Tool -no-listener -no-visitor *.g4
+error(99): Silly.g4::: grammar Silly has no rules
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 1
+</code></pre>
+
+<p>This is perfect. Java has successfully loaded the Antlr JAR file, and the g4 was found and fed into it. Our grammar has no rules, so the error is justified.</p>
+
+<h2 id="make-a-silly-grammar">Make a Silly Grammar</h2>
+
+<p>If you open up the <code>inputfile</code> you will see what our language is supposed to look like, and we will need to create a grammar to represent this language.</p>
+
+<p>inputfile:</p>
+
+<pre><code>variable Hello;
+variable World;
+make Hello 5;
+repeat 3 show Hello;
+make World 10;
+repeat Hello show World;
+</code></pre>
+
+<h3 id="variable-declaration">Variable Declaration</h3>
+
+<p>From <code>variable Hello;</code> we see that a variable declaration has a pattern of <code>variable &lt;id&gt;;</code>.</p>
+
+<h3 id="variable-assignment">Variable Assignment</h3>
+
+<p>We can assign a value to a variable with <code>make &lt;id&gt; &lt;id or integer&gt;;</code>.</p>
+
+<h3 id="repeatably-print-something">Repeatably Print Something</h3>
+
+<p>The last thing that the grammar can do is print something to the console repeatably using <code>repeat &lt;id or integer&gt; show &lt;id or integer&gt;;</code>. What a silly language, am I right?</p>
+
+<h3 id="the-context-free-grammar">The Context Free Grammar</h3>
+
+<p>To fast forward, here is our grammar:</p>
+
+<pre><code>start --&gt; statement+
+statement --&gt; var_decl | var_assign | repeat_show
+var_decl --&gt; 'variable' ID ';'
+var_assign --&gt; 'make' ID var ';'
+repeat_show --&gt; 'repeat' var 'show' var ';'
+var --&gt; ID | NUM
+NUM --&gt; [0-9]+ 
+ID --&gt; [a-zA-Z]?[a-zA-Z0-9_/-]*
+</code></pre>
+
+<p>The <code>start</code> symbol contains one or more statements, and the statements can be any of the three: variable declaration, <code>var_decl</code>; variable assignment, <code>var_assign</code>, and repeatably print something, <code>repeat_show</code>. We have a new non-terminal of <code>var</code> which represents a variable or an integer, which allows us to use the <code>var_assign</code> in such a way that we can assign one variable the value of another variable. We have two basic terminals <code>NUM</code> and <code>ID</code>. The <code>NUM</code> is a positive integer value, and <code>ID</code> is a string like sequence that has to have a minimum length of 1, and the first character has to be a letter, with any subsequent characters being letters, numbers, underscore, or hyphen.</p>
+
+<p>One major note, is that we are going to ignore white space in this language completely.</p>
+
+<h2 id="convert-cfg-to-antlr-g4">Convert CFG to Antlr g4</h2>
+
+<p>Open up the Silly.g4, paste in the grammar and comment out each line like so:</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #204a87; font-weight: bold">grammar</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">Silly</span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+
+<span style="color: #8f5902; font-style: italic">/* import statements go here */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">@header</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"></span>
+
+<span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+
+<span style="color: #8f5902; font-style: italic">/* may or may not need this */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">@members</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"></span>
+<span style="color: #000000">	</span>
+<span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+
+<span style="color: #8f5902; font-style: italic">/* start --&gt; statement+                                 */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #8f5902; font-style: italic">/* statement --&gt; var_decl | var_assign | repeat_show    */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #8f5902; font-style: italic">/* var_decl --&gt; &#39;variable&#39; ID &#39;;&#39;                       */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #8f5902; font-style: italic">/* var_assign --&gt; &#39;make&#39; ID var &#39;;&#39;                     */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #8f5902; font-style: italic">/* repeat_show --&gt; &#39;repeat&#39; var &#39;show&#39; var &#39;;&#39;          */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #8f5902; font-style: italic">/* var --&gt; ID | NUM                                     */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #8f5902; font-style: italic">/* NUM --&gt; [0-9]+                                       */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #8f5902; font-style: italic">/* ID --&gt; [a-zA-Z]?[a-zA-Z0-9_/-]*                      */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+</pre></div>
+
+
+<p>The rules of our grammar actually <em>do</em> something in Antlr. They build up the lexer Java file that Antlr creates, so think of each rule as a function of a program that has an input, and a return value.</p>
+
+<p>For example: the <code>var_decl</code> rule has <code>'variable' ID ';'</code> which means we see the literals <code>variable</code> followed by the terminal <code>ID</code> followed by the literal semicolon. <code>ID</code> is special though; we need to call our <code>ID</code> function/rule to find out the value of it (which should be a string), and then place the value of <code>ID</code> in our variable declaration production. But that&rsquo;s not all! The <code>var_decl</code> actually needs to return the Java equivalent of a variable declaration! In Java to declare an integer value you write <code>int id;</code> where <code>id</code> is the name of our variable. So Antlr in the end will parse the input file and spit out the Java translation. We are basically writing one of those English to French dictionary, except it is a Silly to Java dictionary!</p>
+
+<p>Ok let&rsquo;s do this. Start from the terminals!</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic">/* NUM --&gt; [0-9]+                                       */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">NUM</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #4e9a06">&#39;0&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">..</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;9&#39;</span><span style="color: #ce5c00; font-weight: bold">)+</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+
+<span style="color: #8f5902; font-style: italic">/* ID --&gt; [a-zA-Z]?[a-zA-Z0-9_/-]*                      */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">ID</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #4e9a06">&#39;a&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">..</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;z&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;A&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">..</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;Z&#39;</span><span style="color: #ce5c00; font-weight: bold">)+</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #4e9a06">&#39;a&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">..</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;z&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;A&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">..</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;Z&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;0&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">..</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;9&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;_&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;-&#39;</span><span style="color: #ce5c00; font-weight: bold">)*</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+
+<span style="color: #8f5902; font-style: italic">/* we ignore white space                                 */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">WS</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #4e9a06">&#39; &#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;\t&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;\r&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;\n&#39;</span><span style="color: #ce5c00; font-weight: bold">)</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">skip();</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+</pre></div>
+
+
+<p>Terminals are pretty easy since there is no weird translation to be done, but we see a little bit of Java injected in our grammar with the white space rule. The <code>{skip();}</code> says that for every <code>WS</code> token we find, we are going to call the <code>skip</code> function which simply means we skip this token.</p>
+
+<p>We are now going to move up to the <code>var</code> non-terminal which needs to return the value of an <code>ID</code> or <code>NUM</code>.
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic">/* var --&gt; ID | NUM                                     */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">var</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #204a87; font-weight: bold">returns</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">String number</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">ID</span><span style="color: #f8f8f8; text-decoration: underline"> </span>
+<span style="color: #f8f8f8; text-decoration: underline">		</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> </span>
+<span style="color: #000000">			$number = $ID</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getText(); </span>
+<span style="color: #000000">		</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">NUM</span><span style="color: #f8f8f8; text-decoration: underline"> </span>
+<span style="color: #f8f8f8; text-decoration: underline">		</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> </span>
+<span style="color: #000000">			$number = &quot;&quot;+ $NUM</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getText(); </span>
+<span style="color: #000000">		</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+</pre></div>
+</p>
+
+<p>This is a lot to take in for the first time, so I&rsquo;m going to unpack it!</p>
+
+<p>You now see that the <code>var</code> rule has an added <code>returns [String number]</code> which means that it is going to return a <code>String</code> with the name <code>number</code> which you will be able to access via <code>$var.number</code> within the injected Java code elsewhere in the Antlr grammar.</p>
+
+<p>The <code>$</code> attached to the name of a rule within the Java snippet, is how we tell Antlr we are referring to a rule within the grammar, and not some other variable defined elsewhere.</p>
+
+<p>Each production of the rule has a snippet of Java attached to it between curly braces. The Java attached to the ID is <code>$number = $ID.getText();</code>, which has a lot going on. The <code>$number</code> variable that is returned by <code>var</code>, is being assigned the value of the text in the <code>$ID</code> token.</p>
+
+<p>Let&rsquo;s jump up and fill in the <code>var_decl</code> which isn&rsquo;t going to return the value of a token, but instead return a string containing the Java translation of a variable declaration which looks like <code>int id;</code>.</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic">/* var_decl --&gt; &#39;variable&#39; ID &#39;;&#39;                       */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">var_decl</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #204a87; font-weight: bold">returns</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">String s</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;variable&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">ID</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;;&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span>
+<span style="color: #f8f8f8; text-decoration: underline">		</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> </span>
+<span style="color: #000000">			$s = &quot;int &quot;+$ID</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getText()+&quot;;&quot;;</span>
+<span style="color: #000000">		</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+</pre></div>
+
+
+<p>The <code>var_decl</code> will return a <code>String</code> named <code>s</code> that contains the Java equivalent of a variable declaration, which is just a String. In the Java equivalent of a variable declaration, <code>int id;</code>, we want to replace the <code>id</code> with the text of the <code>ID</code> token, and then assign the value to <code>s</code>, that is exactly what is happening with <code>$s = &quot;int &quot;+$ID.getText()+&quot;;&quot;;</code></p>
+
+<p>Now lets move to the next easiest, the <code>var_assign</code>, which will return a <code>String s</code> that contains the Java equivalent of assigning a value to a variable, <code>id = 42;</code>.</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic">/* var_assign --&gt; &#39;make&#39; ID var &#39;;&#39;                     */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">var_assign</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #204a87; font-weight: bold">returns</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">String s</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;make&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">name</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #000000">ID</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">var</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;;&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span>
+<span style="color: #f8f8f8; text-decoration: underline">		</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> </span>
+<span style="color: #000000">			$s = $name</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getText() + &quot; = &quot; + $var</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">number + &quot;;&quot;;</span>
+<span style="color: #000000">		</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+</pre></div>
+
+
+<p>I&rsquo;m doing something a little extra in this example, I&rsquo;m assigning the ID in the production to an alias to be used within the Java snippet with <code>name=ID</code>. This comes in handy when you have multiple symbols of the same type appear in the production.</p>
+
+<p>Another thing to note, is here when we want to get the value of <code>$var</code> we reference <code>number</code>, and that is because the <code>var</code> rule returns <code>number</code>.</p>
+
+<p>The <code>repeat_show</code> rule translates to a little more Java then before. The Java we want, to print a number a certain number of times is:</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #204a87; font-weight: bold">for</span> <span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">int</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">;</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;</span> <span style="color: #000000">iterations</span><span style="color: #ce5c00; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++)</span>
+    <span style="color: #000000">System</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">out</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">print</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold">);</span>
+</pre></div>
+
+
+<p><code>iterations</code> is the number of times we want to print the number <code>x</code>. If you remember our rule is <code>repeat_show --&gt; 'repeat' var 'show' var ';'</code> so we can see that the first <code>var</code> will be our <code>iterations</code> value and the second <code>var</code> will be the <code>x</code> value. We will need to use aliases here to differentiate between the two <code>var</code>.</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic">/* repeat_show --&gt; &#39;repeat&#39; var &#39;show&#39; var &#39;;&#39;          */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">repeat_show</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #204a87; font-weight: bold">returns</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">String s</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;repeat&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">iterations</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #000000">var</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;show&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #000000">var</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;;&#39;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">		</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> </span>
+<span style="color: #000000">			$s = &quot;for(int i = 0; i &lt; &quot; + $iterations</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">number + &quot;; i++)&quot;;</span>
+<span style="color: #000000">			$s = $s + &quot;System.out.print(&quot; + $x</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">number + &quot;);&quot;;</span>
+<span style="color: #000000">		</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+</pre></div>
+
+
+<p>Almost done! Let&rsquo;s now fill out the <code>statement</code> rule, which will take the <code>s</code> returned from any of the 3 types of statements and return it in its own variable <code>s</code>.</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic">/* statement --&gt; var_decl | var_assign | repeat_show    */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">statement</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #204a87; font-weight: bold">returns</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">String s</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">var_decl</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> $s = $var_decl.s; </span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">var_assign</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> $s = $var_assign.s; </span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">repeat_show</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> $s = $repeat_show.s; </span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+</pre></div>
+
+
+<p>Lastly, but not least, we need to define the <code>start</code> symbol which is going to wrap all the <code>statement</code>s with the required Java to run code! If you recall, the scaffolding we need to do a basic <em>Hello World!</em> in Java is:</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #204a87; font-weight: bold">public</span> <span style="color: #204a87; font-weight: bold">class</span> <span style="color: #000000">SillyOut</span> <span style="color: #ce5c00; font-weight: bold">{</span>
+    <span style="color: #204a87; font-weight: bold">public</span> <span style="color: #204a87; font-weight: bold">static</span> <span style="color: #204a87; font-weight: bold">void</span> <span style="color: #000000">main</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #000000">String</span><span style="color: #ce5c00; font-weight: bold">[]</span> <span style="color: #000000">args</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">{</span>
+        <span style="color: #8f5902; font-style: italic">//Statements go here</span>
+    <span style="color: #ce5c00; font-weight: bold">}</span>
+<span style="color: #ce5c00; font-weight: bold">}</span>
+</pre></div>
+
+
+<p>The <code>start</code> symbol is not going to <code>return</code> anything this time, for this one we want the Java snippet that will be added to the lexer to actually print the entire Java string that has been compiled to the console.</p>
+
+<p>To make things nicer, we will need to add the white space to the string manually, and we need to isolate the Java string that will be printed before and after the statements.</p>
+
+<p>The string to be printed <em>before</em> the statements is:</p>
+
+<pre><code>public class SillyOut {\n\tpublic static void main(String[] args) {\n
+</code></pre>
+
+<p>The string to be printed <em>after</em> the statements is:</p>
+
+<pre><code>\n\t}\n}
+</code></pre>
+
+<p>We will also want to wrap each statement with some tabs and new lines, so that will look something like:</p>
+
+<pre><code>&quot;\t\t&quot; + $statement.s+&quot;\n&quot;
+</code></pre>
+
+<p>So remember, we aren&rsquo;t making a return variable <code>s</code>, but instead <em>printing</em> the string containing the Java to the console. When we put this logic all together, we can replace our <code>start --&gt; statement+</code> rule with something like:</p>
+
+<pre><code>start --&gt; &lt;print before snippet&gt; ( &lt;print statement snippet&gt; )+ &lt;print after snippet&gt;
+</code></pre>
+
+<p>The full rule is:</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #8f5902; font-style: italic">/* start --&gt; statement+                                 */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">start</span><span style="color: #f8f8f8; text-decoration: underline"> </span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">System.out.println(&quot;public class SillyOut {\n\tpublic static void main(String[] args){&quot;);</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">statement</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">System.out.println(&quot;\t\t&quot; + $statement</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">s+&quot;\n&quot;);</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #ce5c00; font-weight: bold">)+</span><span style="color: #f8f8f8; text-decoration: underline">  </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">System.out.println(&quot;\n\t}\n}&quot;);</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline">	</span>
+</pre></div>
+
+
+<p>The full grammar in all its glory should look like:</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #204a87; font-weight: bold">grammar</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">Silly</span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+
+<span style="color: #8f5902; font-style: italic">/* import statements go here */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">@header</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"></span>
+
+<span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+
+<span style="color: #8f5902; font-style: italic">/* may or may not need this */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">@members</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"></span>
+<span style="color: #000000">	</span>
+<span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+
+<span style="color: #8f5902; font-style: italic">/* start --&gt; statement+                                 */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">start</span><span style="color: #f8f8f8; text-decoration: underline"> </span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">System.out.println(&quot;public class SillyOut {\n\tpublic static void main(String[] args){&quot;);</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">statement</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">System.out.println(&quot;\t\t&quot; + $statement</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">s+&quot;\n&quot;);</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #ce5c00; font-weight: bold">)+</span><span style="color: #f8f8f8; text-decoration: underline">  </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">System.out.println(&quot;\n\t}\n}&quot;);</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline">	</span>
+
+<span style="color: #8f5902; font-style: italic">/* statement --&gt; var_decl | var_assign | repeat_show    */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">statement</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #204a87; font-weight: bold">returns</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">String s</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">var_decl</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> $s = $var_decl.s; </span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">var_assign</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> $s = $var_assign.s; </span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">repeat_show</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> $s = $repeat_show.s; </span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+
+<span style="color: #8f5902; font-style: italic">/* var_decl --&gt; &#39;variable&#39; ID &#39;;&#39;                       */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">var_decl</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #204a87; font-weight: bold">returns</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">String s</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;variable&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">ID</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;;&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span>
+<span style="color: #f8f8f8; text-decoration: underline">		</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> </span>
+<span style="color: #000000">			$s = &quot;int &quot;+$ID</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getText()+&quot;;&quot;;</span>
+<span style="color: #000000">		</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+
+<span style="color: #8f5902; font-style: italic">/* var_assign --&gt; &#39;make&#39; ID var &#39;;&#39;                     */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">var_assign</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #204a87; font-weight: bold">returns</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">String s</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;make&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">name</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #000000">ID</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">var</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;;&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span>
+<span style="color: #f8f8f8; text-decoration: underline">		</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> </span>
+<span style="color: #000000">			$s = $name</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getText() + &quot; = &quot; + $var</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">number + &quot;;&quot;;</span>
+<span style="color: #000000">		</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+
+<span style="color: #8f5902; font-style: italic">/* repeat_show --&gt; &#39;repeat&#39; var &#39;show&#39; var &#39;;&#39;          */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">repeat_show</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #204a87; font-weight: bold">returns</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">String s</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;repeat&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">iterations</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #000000">var</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;show&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #000000">var</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;;&#39;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">		</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> </span>
+<span style="color: #000000">			$s = &quot;for(int i = 0; i &lt; &quot; + $iterations</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">number + &quot;; i++)&quot;;</span>
+<span style="color: #000000">			$s = $s + &quot;System.out.print(&quot; + $x</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">number + &quot;);&quot;;</span>
+<span style="color: #000000">		</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+
+
+<span style="color: #8f5902; font-style: italic">/* var --&gt; ID | NUM                                     */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">var</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #204a87; font-weight: bold">returns</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">String number</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">ID</span><span style="color: #f8f8f8; text-decoration: underline"> </span>
+<span style="color: #f8f8f8; text-decoration: underline">		</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> </span>
+<span style="color: #000000">			$number = $ID</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getText(); </span>
+<span style="color: #000000">		</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000">NUM</span><span style="color: #f8f8f8; text-decoration: underline"> </span>
+<span style="color: #f8f8f8; text-decoration: underline">		</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000"> </span>
+<span style="color: #000000">			$number = &quot;&quot;+ $NUM</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getText(); </span>
+<span style="color: #000000">		</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f8f8f8; text-decoration: underline">	</span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+
+<span style="color: #8f5902; font-style: italic">/* NUM --&gt; [0-9]+                                       */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">NUM</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #4e9a06">&#39;0&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">..</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;9&#39;</span><span style="color: #ce5c00; font-weight: bold">)+</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+
+<span style="color: #8f5902; font-style: italic">/* ID --&gt; [a-zA-Z]?[a-zA-Z0-9_/-]*                      */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">ID</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #4e9a06">&#39;a&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">..</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;z&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;A&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">..</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;Z&#39;</span><span style="color: #ce5c00; font-weight: bold">)+</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #4e9a06">&#39;a&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">..</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;z&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;A&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">..</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;Z&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;0&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">..</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;9&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;_&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;-&#39;</span><span style="color: #ce5c00; font-weight: bold">)*</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+
+<span style="color: #8f5902; font-style: italic">/* we ignore white space */</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+<span style="color: #f57900">WS</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">:</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #4e9a06">&#39; &#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;\t&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;\r&#39;</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #ce5c00; font-weight: bold">|</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #4e9a06">&#39;\n&#39;</span><span style="color: #ce5c00; font-weight: bold">)</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">skip();</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #f8f8f8; text-decoration: underline"> </span><span style="color: #000000; font-weight: bold">;</span><span style="color: #f8f8f8; text-decoration: underline"></span>
+</pre></div>
+
+
+<p>Let&rsquo;s take a moment, to just appreciate all that we have done, and all that Antlr is going to <em>do</em> for us. Our Antlr parser is going to translate our Silly source code, compile it into Java and then print the Java code to the console!</p>
+
+<p>If you recall, in my <code>Makefile</code>, I directed the output to a <code>SillyOut.java</code>, which matches the class name in the <em>before snippet</em> that got printed, so let&rsquo;s open up a terminal and see this magic happen!</p>
+
+<p>In your terminal type <code>make all</code> to generate our SillyParser.java, SillyLexer.java, SillyLexer.tokens and Silly.tokens files.</p>
+
+<p>Open up the Silly.tokens and you will find a list of possible tokens that have been generated from our g4, some have been generated, and some are straight from our g4.</p>
+
+<p>If you open up the SillyLexer.java, you will recognize that this does exactly what it should: tokenizes input!</p>
+
+<p>The SillyParser.java contains the magic though, and you will find some of our magic in it!</p>
+
+<p>If you scroll down to where the start symbol got translated you will see:</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>	<span style="color: #204a87; font-weight: bold">public</span> <span style="color: #204a87; font-weight: bold">final</span> <span style="color: #000000">StartContext</span> <span style="color: #000000">start</span><span style="color: #ce5c00; font-weight: bold">()</span> <span style="color: #204a87; font-weight: bold">throws</span> <span style="color: #000000">RecognitionException</span> <span style="color: #ce5c00; font-weight: bold">{</span>
+		<span style="color: #000000">StartContext</span> <span style="color: #000000">_localctx</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">new</span> <span style="color: #000000">StartContext</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #000000">_ctx</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #000000">getState</span><span style="color: #ce5c00; font-weight: bold">());</span>
+		<span style="color: #000000">enterRule</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #000000">_localctx</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #000000">RULE_start</span><span style="color: #ce5c00; font-weight: bold">);</span>
+		<span style="color: #204a87; font-weight: bold">int</span> <span style="color: #000000">_la</span><span style="color: #ce5c00; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">try</span> <span style="color: #ce5c00; font-weight: bold">{</span>
+			<span style="color: #000000">enterOuterAlt</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #000000">_localctx</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #ce5c00; font-weight: bold">);</span>
+			<span style="color: #ce5c00; font-weight: bold">{</span>
+			<span style="color: #000000">System</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">out</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">println</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #4e9a06">&quot;public class SillyOut {\n\tpublic static void main(String[] args){&quot;</span><span style="color: #ce5c00; font-weight: bold">);</span>
+			<span style="color: #000000">setState</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">16</span><span style="color: #ce5c00; font-weight: bold">);</span> 
+			<span style="color: #000000">_errHandler</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">sync</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">this</span><span style="color: #ce5c00; font-weight: bold">);</span>
+			<span style="color: #000000">_la</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">_input</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">LA</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #ce5c00; font-weight: bold">);</span>
+			<span style="color: #204a87; font-weight: bold">do</span> <span style="color: #ce5c00; font-weight: bold">{</span>
+				<span style="color: #ce5c00; font-weight: bold">{</span>
+				<span style="color: #ce5c00; font-weight: bold">{</span>
+				<span style="color: #000000">setState</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">13</span><span style="color: #ce5c00; font-weight: bold">);</span>
+				<span style="color: #ce5c00; font-weight: bold">((</span><span style="color: #000000">StartContext</span><span style="color: #ce5c00; font-weight: bold">)</span><span style="color: #000000">_localctx</span><span style="color: #ce5c00; font-weight: bold">).</span><span style="color: #c4a000">statement</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">statement</span><span style="color: #ce5c00; font-weight: bold">();</span>
+				<span style="color: #000000">System</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">out</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">println</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #4e9a06">&quot;\t\t&quot;</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #ce5c00; font-weight: bold">((</span><span style="color: #000000">StartContext</span><span style="color: #ce5c00; font-weight: bold">)</span><span style="color: #000000">_localctx</span><span style="color: #ce5c00; font-weight: bold">).</span><span style="color: #c4a000">statement</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">s</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">&quot;\n&quot;</span><span style="color: #ce5c00; font-weight: bold">);</span>
+				<span style="color: #ce5c00; font-weight: bold">}</span>
+				<span style="color: #ce5c00; font-weight: bold">}</span>
+				<span style="color: #000000">setState</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">18</span><span style="color: #ce5c00; font-weight: bold">);</span> 
+				<span style="color: #000000">_errHandler</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">sync</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">this</span><span style="color: #ce5c00; font-weight: bold">);</span>
+				<span style="color: #000000">_la</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">_input</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">LA</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #ce5c00; font-weight: bold">);</span>
+			<span style="color: #ce5c00; font-weight: bold">}</span> <span style="color: #204a87; font-weight: bold">while</span> <span style="color: #ce5c00; font-weight: bold">(</span> <span style="color: #ce5c00; font-weight: bold">(((</span><span style="color: #000000">_la</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">&amp;</span> <span style="color: #ce5c00; font-weight: bold">~</span><span style="color: #0000cf; font-weight: bold">0x3f</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">==</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #ce5c00; font-weight: bold">&amp;&amp;</span> <span style="color: #ce5c00; font-weight: bold">((</span><span style="color: #0000cf; font-weight: bold">1L</span> <span style="color: #ce5c00; font-weight: bold">&lt;&lt;</span> <span style="color: #000000">_la</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">&amp;</span> <span style="color: #ce5c00; font-weight: bold">((</span><span style="color: #0000cf; font-weight: bold">1L</span> <span style="color: #ce5c00; font-weight: bold">&lt;&lt;</span> <span style="color: #000000">T__0</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">|</span> <span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">1L</span> <span style="color: #ce5c00; font-weight: bold">&lt;&lt;</span> <span style="color: #000000">T__2</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">|</span> <span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">1L</span> <span style="color: #ce5c00; font-weight: bold">&lt;&lt;</span> <span style="color: #000000">T__3</span><span style="color: #ce5c00; font-weight: bold">)))</span> <span style="color: #ce5c00; font-weight: bold">!=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">);</span>
+			<span style="color: #000000">System</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">out</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">println</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #4e9a06">&quot;\n\t}\n}&quot;</span><span style="color: #ce5c00; font-weight: bold">);</span>
+			<span style="color: #ce5c00; font-weight: bold">}</span>
+		<span style="color: #ce5c00; font-weight: bold">}</span>
+		<span style="color: #204a87; font-weight: bold">catch</span> <span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #000000">RecognitionException</span> <span style="color: #000000">re</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">{</span>
+			<span style="color: #000000">_localctx</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">exception</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">re</span><span style="color: #ce5c00; font-weight: bold">;</span>
+			<span style="color: #000000">_errHandler</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">reportError</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">this</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #000000">re</span><span style="color: #ce5c00; font-weight: bold">);</span>
+			<span style="color: #000000">_errHandler</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #c4a000">recover</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">this</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #000000">re</span><span style="color: #ce5c00; font-weight: bold">);</span>
+		<span style="color: #ce5c00; font-weight: bold">}</span>
+		<span style="color: #204a87; font-weight: bold">finally</span> <span style="color: #ce5c00; font-weight: bold">{</span>
+			<span style="color: #000000">exitRule</span><span style="color: #ce5c00; font-weight: bold">();</span>
+		<span style="color: #ce5c00; font-weight: bold">}</span>
+		<span style="color: #204a87; font-weight: bold">return</span> <span style="color: #000000">_localctx</span><span style="color: #ce5c00; font-weight: bold">;</span>
+	<span style="color: #ce5c00; font-weight: bold">}</span>
+</pre></div>
+</p>
+
+<p>Can you identify the three print statements in there that we injected from our g4 file? How magical is that!?</p>
+
+<p>Now feel free to go back to your terminal and execute <code>make silly</code> to compile and execute the generated SillyOut.java.</p>
+
+<p>What I want everyone to now do, is get an idea of the errors and problems that can arise. I want everyone to break some part of the g4, take out a semicolon, take out a bar, remove the return statement, anything! Try to then run <code>make all</code> and then share with the class two things:</p>
+
+<ol>
+<li>What did you change in the g4 and what line it was on</li>
+<li>The console output that was the result of your added bug</li>
+</ol>
+
+                        </div>
+                        
+                        
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'adelehedrick-github-io';
+    var disqus_identifier = 'https:\/\/adelehedrick.github.io\/blog\/2017\/03\/12\/discovering-the-antlr\/';
+    var disqus_title = 'Discovering the Antlr';
+    var disqus_url = 'https:\/\/adelehedrick.github.io\/blog\/2017\/03\/12\/discovering-the-antlr\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
+                        
+
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">Search</h3>
+    </div>
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" results="0" class="form-control" placeholder="Search">
+                <input type="hidden" name="q" value="site:https://adelehedrick.github.io/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">Categories</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            <li><a href="https://adelehedrick.github.io/categories/aquaponics">aquaponics (1)</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/categories/bonus">bonus (1)</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/categories/clojure">clojure (10)</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/categories/compilers">compilers (1)</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/categories/scala">scala (2)</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+    <div class="panel-heading">
+        <h3 class="panel-title">Tags</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            <li><a href="https://adelehedrick.github.io/tags/10-gallon"><i class="fa fa-tags"></i> 10-gallon</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/aliases"><i class="fa fa-tags"></i> aliases</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/antlr"><i class="fa fa-tags"></i> antlr</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/aquaponics"><i class="fa fa-tags"></i> aquaponics</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/bash"><i class="fa fa-tags"></i> bash</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/classes"><i class="fa fa-tags"></i> classes</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/clojure"><i class="fa fa-tags"></i> clojure</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/compilers"><i class="fa fa-tags"></i> compilers</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/fish-tank"><i class="fa fa-tags"></i> fish-tank</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/gedit"><i class="fa fa-tags"></i> gedit</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/if-statement"><i class="fa fa-tags"></i> if-statement</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/input"><i class="fa fa-tags"></i> input</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/java"><i class="fa fa-tags"></i> java</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/leiningen"><i class="fa fa-tags"></i> leiningen</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/let"><i class="fa fa-tags"></i> let</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/loop"><i class="fa fa-tags"></i> loop</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/recur"><i class="fa fa-tags"></i> recur</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/scala"><i class="fa fa-tags"></i> scala</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/set-up"><i class="fa fa-tags"></i> set-up</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/split"><i class="fa fa-tags"></i> split</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/string"><i class="fa fa-tags"></i> string</a>
+            </li>
+            
+            <li><a href="https://adelehedrick.github.io/tags/syntax-highlighting"><i class="fa fa-tags"></i> syntax-highlighting</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4>About Me</h4>
+
+            <p>Masters of Computer Science Candidate, Software Developer and Aspiring Data Scientist.</p>
+
+            <img src="https://adelehedrick.github.io/img/profile_pic.jpeg" alt="profile picture" />
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+            <h4>Recent posts</h4>
+
+            <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://adelehedrick.github.io/blog/2017/03/12/discovering-the-antlr/">
+                          
+                            <img src="https://adelehedrick.github.io/img/banners/antlers.jpg" class="img-responsive" alt="">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://adelehedrick.github.io/blog/2017/03/12/discovering-the-antlr/">Discovering the Antlr</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://adelehedrick.github.io/blog/2017/01/03/cleaning-used-tank/">
+                          
+                            <img src="https://adelehedrick.github.io/img/aquaponics/first-10-gal-system/cleaning-tank-before.jpg" class="img-responsive" alt="">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://adelehedrick.github.io/blog/2017/01/03/cleaning-used-tank/">Cleaning a Used Fish Tank</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://adelehedrick.github.io/blog/2016/10/29/blasting-off-scala/">
+                          
+                            <img src="https://adelehedrick.github.io/img/banners/blast-off-scala.jpg" class="img-responsive" alt="">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://adelehedrick.github.io/blog/2016/10/29/blasting-off-scala/">Blasting Off with Scala</a></h5>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr class="hidden-md hidden-lg">
+
+        </div>
+        
+
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright (c) 2016, Adele Hedrick; all rights reserved.</p>
+            
+            <p class="pull-right">
+              Template by <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              
+
+              Ported to Hugo by <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-89800406-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<script src="https://adelehedrick.github.io/js/jquery.cookie.js"></script>
+<script src="https://adelehedrick.github.io/js/waypoints.min.js"></script>
+<script src="https://adelehedrick.github.io/js/jquery.counterup.min.js"></script>
+<script src="https://adelehedrick.github.io/js/jquery.parallax-1.1.3.js"></script>
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+<script src="https://adelehedrick.github.io/js/hpneo.gmaps.js"></script>
+<script src="https://adelehedrick.github.io/js/gmaps.init.js"></script>
+<script src="https://adelehedrick.github.io/js/front.js"></script>
+
+
+<script src="https://adelehedrick.github.io/js/owl.carousel.min.js"></script>
+
+
+  </body>
+</html>
