@@ -6,8 +6,64 @@
     <description>Recent content in Aquaponics on Syntactic Sugar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Mar 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://adelehedrick.github.io/categories/aquaponics/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Making a Bell Siphon</title>
+      <link>https://adelehedrick.github.io/blog/2017/03/20/bell-siphon/</link>
+      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://adelehedrick.github.io/blog/2017/03/20/bell-siphon/</guid>
+      <description>
+
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;A bell siphon is a simply made&amp;mdash;yet sophisticated tool&amp;mdash;that allows you to fill a reservoir with water up to the height of the stand pipe, and then drain the water out of the reservoir till the water level meets with the top of the slits at the bottom of the bell. There are some tricks to getting the siphoning working, and essentially they are to have a funnel at the top of the stand pipe that doubles the circumference of the stand pipe, and to also have an elbow in the drain pipe. The funnel at the top of the stand pipe ensures that enough water is forced into the smaller pipe, and the elbow ensures that a &amp;ldquo;plug&amp;rdquo; gets engaged. The &amp;ldquo;plug&amp;rdquo; refers to when a portion of the pipe is completely filled with water in such a way that air is not being returned as water is flowing through it. It is this &amp;ldquo;plug&amp;rdquo; that activates the siphoning.&lt;/p&gt;
+
+&lt;p&gt;For my media bed, which has a height of 8.5&amp;rdquo;, I wanted my media guard to be over the height of the media bed, my stand pipe to be 6.5&amp;rdquo; in height to allow for the top 1&amp;rdquo;-1 &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;&amp;rdquo; of media to be dry, and the bell to allow 1&amp;rdquo; of sludge at the bottom. So I measured, and cut, and measured, and cut, till I had the appropriate lengths of pipe with the other PVC hardware attached.&lt;/p&gt;
+
+&lt;p&gt;Since the water pressure in these pipes will only be due to gravity, none of the components were glued. This is also beneficial for cleaning and reusing pipe!&lt;/p&gt;
+
+&lt;h1 id=&#34;materials&#34;&gt;Materials&lt;/h1&gt;
+
+&lt;h2 id=&#34;pipe-from-home-depot&#34;&gt;Pipe from Home Depot&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;&amp;rdquo; PVC pipe (stand pipe and drain)&lt;/li&gt;
+&lt;li&gt;2&amp;rdquo; PVC pipe (for the bell)&lt;/li&gt;
+&lt;li&gt;3&amp;rdquo; PVC pipe (for the media guard)&lt;/li&gt;
+&lt;li&gt;1 x O-ring&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;odds-ends-ordered-online-for-cheap&#34;&gt;Odds &amp;amp; Ends Ordered Online for Cheap&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2 x &lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;&amp;rdquo; elbows &lt;a href=&#34;http://www.irrigationdirect.ca/406-007-3-4-Elbow-90-Slip-x-Slip-Sch-40-PVC-Fitting-White.html&#34;&gt;SKU 406-007 on Irrigation Direct Canada&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;1 x Reducing Brusing Fitting &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;&amp;rdquo; x &lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;&amp;rdquo; Spigot x Slip &lt;a href=&#34;http://www.irrigationdirect.ca/437-210-Schedule-40-PVC-Reducing-Bushing-Fitting-1-1-2-x-3-4-Spigot-x-Slip.html&#34;&gt;SKU 437-210 on Irrigation Direct Canada&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;1 x &lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;&amp;rdquo; Female Adapter FIPT x Slip &lt;a href=&#34;http://www.irrigationdirect.ca/435-007-3-4-Female-Adapter-FIPT-x-SLIP.html&#34;&gt;SKU 435-007 on Irrigation Direct Canada&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;1 x &lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;&amp;rdquo; Male Adapter Fitting MIPT x Slip &lt;a href=&#34;http://www.irrigationdirect.ca/436-007-Schedule-40-PVC-Male-Adapter-Fitting-3-4-Mipt-x-Slip.html&#34;&gt;SKU 436-007 on Irrigation Direct Canada&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;1 x 2&amp;rdquo; Cap Slip &lt;a href=&#34;http://www.irrigationdirect.ca/447-020-Schedule-40-PVC-Cap-Slip-2.html&#34;&gt;SKU 447-020 on Irrigation Direct Canada&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;tools&#34;&gt;Tools&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hack Saw&lt;/li&gt;
+&lt;li&gt;Dremmel with a cutting blade of some kind (to trim the funnel piece I had, but you could use a heat gun to widen the top of the stand pipe as well)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;../../img/aquaponics/first-10-gal-system/bell_siphon.jpg&#34; width=&#34;400px&#34; alt=&#34;Bell Siphon&#34; &gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;result&#34;&gt;Result&lt;/h1&gt;
+
+&lt;p&gt;The picture above was the final product. On the top from left-to-right we have the media guard, bell, stand pipe, and you see I have a little black o-ring and then the drain pipe with the elbows. When testing on water only in my media bed, the siphon worked like a charm, but after I filled in the expanded clay, I had problems.&lt;/p&gt;
+
+&lt;h2 id=&#34;problems&#34;&gt;Problems&lt;/h2&gt;
+
+&lt;p&gt;I should have made slits at the bottom of the media guard. Too many tiny pieces got into the bell, and eventually slowed the water down. To solve this, I flipped the media guard upside-down, to have the flat end on the bottom of my tub. My tub has an irregular bottom, so water is still easily able to slip under the bottom of the media guard. The other problem I had was that I rinsed my media inside the media bed, and a good portion of the dust and tiny pieces, created a thick mud which eventually clogged everything up! So pro tip: rinse off your media &lt;em&gt;outside&lt;/em&gt; of your system.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Cleaning a Used Fish Tank</title>

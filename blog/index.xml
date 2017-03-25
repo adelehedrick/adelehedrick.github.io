@@ -6,8 +6,64 @@
     <description>Recent content in Blogs on Syntactic Sugar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Mar 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://adelehedrick.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Making a Bell Siphon</title>
+      <link>https://adelehedrick.github.io/blog/2017/03/20/bell-siphon/</link>
+      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://adelehedrick.github.io/blog/2017/03/20/bell-siphon/</guid>
+      <description>
+
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;A bell siphon is a simply made&amp;mdash;yet sophisticated tool&amp;mdash;that allows you to fill a reservoir with water up to the height of the stand pipe, and then drain the water out of the reservoir till the water level meets with the top of the slits at the bottom of the bell. There are some tricks to getting the siphoning working, and essentially they are to have a funnel at the top of the stand pipe that doubles the circumference of the stand pipe, and to also have an elbow in the drain pipe. The funnel at the top of the stand pipe ensures that enough water is forced into the smaller pipe, and the elbow ensures that a &amp;ldquo;plug&amp;rdquo; gets engaged. The &amp;ldquo;plug&amp;rdquo; refers to when a portion of the pipe is completely filled with water in such a way that air is not being returned as water is flowing through it. It is this &amp;ldquo;plug&amp;rdquo; that activates the siphoning.&lt;/p&gt;
+
+&lt;p&gt;For my media bed, which has a height of 8.5&amp;rdquo;, I wanted my media guard to be over the height of the media bed, my stand pipe to be 6.5&amp;rdquo; in height to allow for the top 1&amp;rdquo;-1 &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;&amp;rdquo; of media to be dry, and the bell to allow 1&amp;rdquo; of sludge at the bottom. So I measured, and cut, and measured, and cut, till I had the appropriate lengths of pipe with the other PVC hardware attached.&lt;/p&gt;
+
+&lt;p&gt;Since the water pressure in these pipes will only be due to gravity, none of the components were glued. This is also beneficial for cleaning and reusing pipe!&lt;/p&gt;
+
+&lt;h1 id=&#34;materials&#34;&gt;Materials&lt;/h1&gt;
+
+&lt;h2 id=&#34;pipe-from-home-depot&#34;&gt;Pipe from Home Depot&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;&amp;rdquo; PVC pipe (stand pipe and drain)&lt;/li&gt;
+&lt;li&gt;2&amp;rdquo; PVC pipe (for the bell)&lt;/li&gt;
+&lt;li&gt;3&amp;rdquo; PVC pipe (for the media guard)&lt;/li&gt;
+&lt;li&gt;1 x O-ring&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;odds-ends-ordered-online-for-cheap&#34;&gt;Odds &amp;amp; Ends Ordered Online for Cheap&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2 x &lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;&amp;rdquo; elbows &lt;a href=&#34;http://www.irrigationdirect.ca/406-007-3-4-Elbow-90-Slip-x-Slip-Sch-40-PVC-Fitting-White.html&#34;&gt;SKU 406-007 on Irrigation Direct Canada&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;1 x Reducing Brusing Fitting &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;&amp;rdquo; x &lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;&amp;rdquo; Spigot x Slip &lt;a href=&#34;http://www.irrigationdirect.ca/437-210-Schedule-40-PVC-Reducing-Bushing-Fitting-1-1-2-x-3-4-Spigot-x-Slip.html&#34;&gt;SKU 437-210 on Irrigation Direct Canada&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;1 x &lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;&amp;rdquo; Female Adapter FIPT x Slip &lt;a href=&#34;http://www.irrigationdirect.ca/435-007-3-4-Female-Adapter-FIPT-x-SLIP.html&#34;&gt;SKU 435-007 on Irrigation Direct Canada&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;1 x &lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;&amp;rdquo; Male Adapter Fitting MIPT x Slip &lt;a href=&#34;http://www.irrigationdirect.ca/436-007-Schedule-40-PVC-Male-Adapter-Fitting-3-4-Mipt-x-Slip.html&#34;&gt;SKU 436-007 on Irrigation Direct Canada&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;1 x 2&amp;rdquo; Cap Slip &lt;a href=&#34;http://www.irrigationdirect.ca/447-020-Schedule-40-PVC-Cap-Slip-2.html&#34;&gt;SKU 447-020 on Irrigation Direct Canada&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;tools&#34;&gt;Tools&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hack Saw&lt;/li&gt;
+&lt;li&gt;Dremmel with a cutting blade of some kind (to trim the funnel piece I had, but you could use a heat gun to widen the top of the stand pipe as well)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;../img/aquaponics/first-10-gal-system/bell_siphon.jpg&#34; width=&#34;400px&#34; alt=&#34;Bell Siphon&#34; &gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;result&#34;&gt;Result&lt;/h1&gt;
+
+&lt;p&gt;The picture above was the final product. On the top from left-to-right we have the media guard, bell, stand pipe, and you see I have a little black o-ring and then the drain pipe with the elbows. When testing on water only in my media bed, the siphon worked like a charm, but after I filled in the expanded clay, I had problems.&lt;/p&gt;
+
+&lt;h2 id=&#34;problems&#34;&gt;Problems&lt;/h2&gt;
+
+&lt;p&gt;I should have made slits at the bottom of the media guard. Too many tiny pieces got into the bell, and eventually slowed the water down. To solve this, I flipped the media guard upside-down, to have the flat end on the bottom of my tub. My tub has an irregular bottom, so water is still easily able to slip under the bottom of the media guard. The other problem I had was that I rinsed my media inside the media bed, and a good portion of the dust and tiny pieces, created a thick mud which eventually clogged everything up! So pro tip: rinse off your media &lt;em&gt;outside&lt;/em&gt; of your system.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Discovering the Antlr</title>
@@ -2074,75 +2130,6 @@ Caused by: java.lang.RuntimeException: Unable to resolve symbol: printlny in thi
 &lt;h2 id=&#34;moving-forward&#34;&gt;Moving Forward&lt;/h2&gt;
 
 &lt;p&gt;Ready for more? Why don&amp;rsquo;t you head over to the &lt;a href=&#34;https://adelehedrick.github.io/blog/2016/09/22/clojure-classes/&#34;&gt;post on making classes from Clojure files&lt;/a&gt;!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Setting Up Leiningen</title>
-      <link>https://adelehedrick.github.io/blog/2016/09/18/setting-up-lein/</link>
-      <pubDate>Sun, 18 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://adelehedrick.github.io/blog/2016/09/18/setting-up-lein/</guid>
-      <description>
-
-&lt;h2 id=&#34;before-we-begin&#34;&gt;Before We Begin&lt;/h2&gt;
-
-&lt;p&gt;This guide will be for setting up your environment in a Linux OS, I&amp;rsquo;m currently using Ubuntu. You will need Java version 1.6 or later, which is recommended by everything that I have read so far.&lt;/p&gt;
-
-&lt;p&gt;To check your Java version just open up a terminal and type:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;java -version
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To quote their &lt;a href=&#34;http://leiningen.org/&#34;&gt;website&lt;/a&gt;; Leiningen is &amp;ldquo;for automating Clojure projects without setting your hair on fire.&amp;rdquo; Leiningen will be helping us get Clojure running as well as manage any dependencies we use. Instructions are on their &lt;a href=&#34;http://leiningen.org/&#34;&gt;website&lt;/a&gt; for installing Leiningen, but they are not detailed enough for my liking, so I have made very thorough instructions.&lt;/p&gt;
-
-&lt;h2 id=&#34;install-leiningen&#34;&gt;Install Leiningen&lt;/h2&gt;
-
-&lt;h3 id=&#34;step-1-open-a-terminal-and-download-the-lein-script&#34;&gt;Step 1. Open a terminal and download the lein script&lt;/h3&gt;
-
-&lt;p&gt;Download the script right from the source listed on the Leiningen &lt;a href=&#34;http://leiningen.org/&#34;&gt;website&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;step-2-change-ownership&#34;&gt;Step 2. Change ownership&lt;/h3&gt;
-
-&lt;p&gt;Use chmod to change the &lt;em&gt;ownership&lt;/em&gt; of the lein bash file you just downloaded to allow for anyone to execute the file.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;chmod a+x lein
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;step-3-move-lein&#34;&gt;Step 3. Move lein&lt;/h3&gt;
-
-&lt;p&gt;Now move lein&amp;ndash;with super user privileges&amp;ndash;to your system&amp;rsquo;s executable path.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo mv lein /usr/bin
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If you are prompted to enter your password, do so and carry on.&lt;/p&gt;
-
-&lt;h3 id=&#34;step-4-run-it&#34;&gt;Step 4. Run it&lt;/h3&gt;
-
-&lt;p&gt;Now you will simply run &lt;em&gt;lein&lt;/em&gt; and it will download the self-install package. If you try to run lein without super user privileges, it might yell at you about firewall junk. Be sure to press &lt;code&gt;ENTER&lt;/code&gt; when it asks you to confirm this action.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo lein
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;step-5-confirm-all-is-well&#34;&gt;Step 5. Confirm all is well&lt;/h3&gt;
-
-&lt;p&gt;Just to make sure everything is good, let&amp;rsquo;s check the version of lein.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;lein -v
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You should receive an output similar to mine below (depending on your Java version).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; Leiningen 2.7.0 on Java 1.7.0_80 Java HotSpot(TM) 64-Bit Server VM
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h2&gt;
-
-&lt;p&gt;Now that you have Leiningen installed and the Clojure compiler downloaded, why don&amp;rsquo;t you start &lt;a href=&#34;https://adelehedrick.github.io/blog/2016/09/19/first-lein-repl/&#34;&gt;your first Leiningen REPL&lt;/a&gt;?&lt;/p&gt;
 </description>
     </item>
     
